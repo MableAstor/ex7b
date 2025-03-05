@@ -1,10 +1,7 @@
 function checkSID() {
   let sid = (document.getElementById("sid").value).trim();
-  if (sid.length == 10) {
-    return true;
-  } else {
-    return false;
-  }
+  let regex = /^\d{10}$/;
+  return regex.test(sid);
 }
 
 function checkCandiNo() {
