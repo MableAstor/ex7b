@@ -6,10 +6,11 @@ function checkSID() {
 
 function checkCandiNo() {
   let candi = (document.getElementById("candi").value).trim();
-  if (isNaN(candi) || candi < 1) {
-    return false;
-  } else {
+  let num = Number(candi);
+  if (!isNaN(num) && num >= 1 && num <= 10 && Number.isInteger(num)) {
     return true;
+  } else {
+    return false;
   }
 }
 
